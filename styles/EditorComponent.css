@@ -1,0 +1,30 @@
+/* إجبار النص داخل محرر Quill على اللون الأسود */
+.ql-editor {
+    color: #333 !important; /* لون غامق وواضح */
+    font-size: 16px;       /* حجم خط مريح للعين */
+    text-align: right;     /* بما أنك تكتب بالعربية */
+    min-height: 300px;
+}
+
+/* تحسين وضوح الـ Placeholder (النص التوضيحي) */
+.ql-editor.ql-blank::before {
+    color: #999 !important;
+    font-style: normal;
+}
+
+/* تنسيق شريط الأدوات ليصبح أكثر وضوحاً */
+.ql-snow .ql-stroke {
+    stroke: #444 !important;
+}
+
+.preview-img {
+    max-width: 200px;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+}
+.content-section {
+    background: #f8f9fa;
+}

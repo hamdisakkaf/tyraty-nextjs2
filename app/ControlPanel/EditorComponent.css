@@ -1,0 +1,57 @@
+/* حاوية المحرر الأساسية */
+.editorjs-container {
+    background-color: #ffffff;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    padding: 20px;
+    min-height: 200px;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+/* التنسيق عند التركيز على المحرر */
+.editorjs-container:focus-within {
+    border-color: #86b7fe;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+/* تنسيق النصوص داخل المحرر لتدعم العربية */
+.ce-block__content, 
+.ce-toolbar__content {
+    max-width: 100%; /* ليأخذ المحرر كامل عرض الحاوية */
+    direction: rtl;
+    text-align: right;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* تنسيق العناوين (Headers) */
+.ce-header {
+    padding: 10px 0;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* تنسيق الفقرات (Paragraphs) */
+.ce-paragraph {
+    line-height: 1.8;
+    font-size: 16px;
+    color: #444;
+}
+
+/* تنسيق القوائم (Lists) */
+.cdx-list {
+    padding-right: 40px; /* مساحة للنقاط من اليمين */
+}
+
+/* تنسيق الـ Placeholder (النص المساعد قبل الكتابة) */
+.ce-paragraph[data-placeholder]:empty::before {
+    color: #adb5bd;
+    font-weight: normal;
+}
+
+/* تحسين شكل الأدوات (Toolbar) لتناسب الـ RTL */
+.ce-toolbar__actions {
+    right: auto !important;
+    left: -60px !important; /* نقل أيقونة الإضافة لليسار حتى لا تغطي النص العربي */
+}

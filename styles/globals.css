@@ -1,0 +1,476 @@
+/* globals.css */
+/* styles/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* الوزن العادي لخط الجزيرة 400 (للمقالات، والفقرات، وروابط الهيدر) */
+  @font-face {
+    font-family: 'Al-Jazeera-Arabic';
+    src: url('/fonts/Al-Jazeera-Arabic-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  /* الوزن العريض لخط الجزيرة 700 (للشعار، وعناوين المقالات، والأزرار) */
+  @font-face {
+    font-family: 'Al-Jazeera-Arabic';
+    src: url('/fonts/Al-Jazeera-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  /* تطبيق الخطوط والألوان الرسمية المعتمدة لـ تايراتي على الموقع كاملاً */
+  html, body {
+    font-family: var(--font-aljazeera), var(--font-montserrat), sans-serif;
+    background-color: #2B2B2B; /* اللون الأسود المعتمد */
+    color: #F4F1EA;            /* اللون الفاتح المعتمد للنصوص */
+  }
+
+  /* إجبار محتوى المقالات وروابط الهيدر على المظهر الموحد */
+  h1, h2, h3, h4, h5, h6, p, span, a, button, input {
+    font-family: var(--font-aljazeera), var(--font-montserrat), sans-serif;
+  }
+}
+@media print {
+  /* إخفاء الأزرار فقط */
+  body > div > div:first-child {
+    display: none !important;
+  }
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+    animation: fadeIn 0.3s ease-out forwards;
+}
+  /* الفاتورة - خلفية بيضاء مع الحفاظ على التباعد */
+  #printable-invoice  {
+    background-color: white !important;
+    padding: 2rem !important;
+    max-width: 1000px !important;
+    margin: 0 auto !important;
+
+  }
+
+  /* رأس الفاتورة */
+  #printable-invoice .border-b-2 {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: flex-start !important;
+    border-bottom: 2px solid #2563eb !important;
+    padding-bottom: 1.5rem !important;
+    margin-bottom: 2rem !important;
+  }
+
+  /* الشعار والعنوان */
+  #printable-invoice h1 {
+    font-size: 30px !important;
+    font-weight: 900 !important;
+    color: #1e40af !important;
+    margin-bottom: 0.25rem !important;
+  }
+
+  #printable-invoice img {
+    max-width: 200px !important;
+    height: auto !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  #printable-invoice .text-gray-500 {
+    color: #6b7280 !important;
+    font-size: 14px !important;
+  }
+
+  /* تفاصيل الفاتورة */
+  #printable-invoice .text-gray-600 {
+    color: #4b5563 !important;
+    font-size: 14px !important;
+  }
+
+  #printable-invoice .font-bold {
+    font-weight: 700 !important;
+  }
+
+  /* حالة الطلب */
+  #printable-invoice .bg-yellow-100 {
+    background-color: #fef3c7 !important;
+    color: #92400e !important;
+    padding: 0.25rem 0.75rem !important;
+    border-radius: 9999px !important;
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    display: inline-block !important;
+  }
+
+  #printable-invoice h2 {
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    color: #1f2937 !important;
+    margin-top: 0.5rem !important;
+  }
+
+  /* بطاقة معلومات العميل */
+  #printable-invoice .grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 1.5rem !important;
+    background-color: #f9fafb !important;
+    padding: 1rem !important;
+    border-radius: 0.5rem !important;
+    margin-bottom: 2rem !important;
+  }
+
+  #printable-invoice .text-blue-700 {
+    color: #1d4ed8 !important;
+    font-weight: 700 !important;
+    font-size: 14px !important;
+    border-bottom: 1px solid #e5e7eb !important;
+    padding-bottom: 0.25rem !important;
+    margin-bottom: 0.75rem !important;
+  }
+
+  /* الجدول - تصميم محسن */
+  #printable-invoice table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    margin-bottom: 2rem !important;
+    font-size: 14px !important;
+  }
+
+  #printable-invoice thead tr {
+    background-color: #1d4ed8 !important;
+  }
+
+  #printable-invoice th {
+    padding: 12px 16px !important;
+    text-align: right !important;
+    color: white !important;
+    font-weight: 700 !important;
+    font-size: 14px !important;
+  }
+
+  /* محاذاة محددة للأعمدة */
+  #printable-invoice th:nth-child(3) {
+    text-align: center !important;
+  }
+
+  #printable-invoice th:nth-child(4) {
+    text-align: left !important;
+  }
+
+  #printable-invoice td {
+    padding: 12px 16px !important;
+    border-bottom: 1px solid #e5e7eb !important;
+    color: #111827 !important;
+  }
+
+  /* محاذاة الخلايا */
+  #printable-invoice td:nth-child(3) {
+    text-align: center !important;
+  }
+
+  #printable-invoice td:nth-child(4) {
+    text-align: left !important;
+    font-weight: 700 !important;
+  }
+
+  /* اسم المنتج */
+  #printable-invoice td:first-child div:first-child {
+    font-weight: 700 !important;
+    color: #111827 !important;
+  }
+
+  /* المقاس */
+  #printable-invoice td:first-child div:last-child {
+    font-size: 12px !important;
+    color: #6b7280 !important;
+  }
+
+  /* تذييل الفاتورة */
+  #printable-invoice .border-t {
+    border-top: 1px solid #e5e7eb !important;
+    padding-top: 1rem !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: flex-end !important;
+  }
+
+  #printable-invoice .text-gray-400 {
+    color: #9ca3af !important;
+    font-size: 12px !important;
+    font-style: italic !important;
+    line-height: 1.5 !important;
+  }
+
+  /* قسم الإجمالي */
+  #printable-invoice .w-64 {
+    width: 250px !important;
+  }
+
+  #printable-invoice .space-y-2 > * + * {
+    margin-top: 0.5rem !important;
+  }
+
+  #printable-invoice .flex.justify-between {
+    display: flex !important;
+    justify-content: space-between !important;
+    font-size: 14px !important;
+  }
+
+  #printable-invoice .bg-green-50 {
+    background-color: #f0fdf4 !important;
+    border: 1px solid #86efac !important;
+    border-radius: 0.5rem !important;
+    padding: 0.5rem !important;
+  }
+
+  #printable-invoice .text-green-800 {
+    color: #166534 !important;
+    font-size: 12px !important;
+    font-weight: 700 !important;
+  }
+
+  #printable-invoice .text-green-700 {
+    color: #15803d !important;
+    font-weight: 900 !important;
+    font-size: 18px !important;
+  }
+
+  /* هوامش الصفحة */
+  @page {
+    margin: 1.5cm;
+    size: A4;
+  }
+
+  /* منع كسر الجدول عبر صفحات */
+  #printable-invoice tr {
+    page-break-inside: avoid !important;
+  }
+
+  #printable-invoice thead {
+    display: table-header-group !important;
+  }
+
+  #printable-invoice tfoot {
+    display: table-footer-group !important;
+  }
+    /* توسيط قسم التذييل */
+  #printable-invoice .mt-12.pt-8 {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    margin-top: 3rem !important;
+    padding-top: 2rem !important;
+    border-top: 1px solid #e5e7eb !important;
+    width: 100% !important;
+  }
+
+  /* توسيط حاوية الشعار والنص */
+  #printable-invoice .flex.flex-col.items-center.gap-2 {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 0.5rem !important;
+    margin-bottom: 1rem !important;
+    width: 100% !important;
+  }
+
+  /* تحجيم الشعار للطباعة */
+  #printable-invoice .print\:h-20 {
+    height: 5rem !important;
+    width: auto !important;
+    max-width: 200px !important;
+    margin-bottom: 0.25rem !important;
+  }
+
+  /* توسيط عنوان الموقع */
+  #printable-invoice h1.text-2xl {
+    font-size: 24px !important;
+    font-weight: 900 !important;
+    color: #1e40af !important;
+    letter-spacing: -0.025em !important;
+    text-align: center !important;
+    margin: 0 auto !important;
+  }
+
+  /* توسيط رسالة الختام */
+  #printable-invoice .text-gray-400.text-xs {
+    font-size: 12px !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  /* توسيط الفقرة الأولى */
+  #printable-invoice .text-gray-400.text-xs p:first-child {
+    margin-bottom: 0.5rem !important;
+    font-style: italic !important;
+    font-weight: 500 !important;
+    color: #6b7280 !important;
+    text-align: center !important;
+  }
+
+  /* تنسيق حقوق النشر */
+  #printable-invoice .font-mono.uppercase {
+    font-family: monospace !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.2em !important;
+    font-size: 10px !important;
+    opacity: 0.7 !important;
+    text-align: center !important;
+  }
+}
+
+/* Guest Pay Modal */
+/* الخلفية الشفافة التي تغطي الشاشة بالكامل */
+/* 1. تحديث الخلفية لتسمح بالتمرير إذا كان المودال طويلاً */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* تغيير من center إلى flex-start */
+    padding: 40px 10px;      /* مسافة أمان من فوق وتحت */
+    overflow-y: auto;        /* تفعيل التمرير في الخلفية عند الحاجة */
+    z-index: 1000;
+}
+
+/* تأكد أن الصندوق الأبيض له موضع نسبي ليتموضع الزر داخله */
+.modal-content {
+    position: relative; /* ضروري جداً لظهور الزر في مكانه */
+    background: white;
+    padding: 40px 20px 20px 20px; /* مسافة علوية 40px لترك مكان للزر */
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+    margin: auto;
+}
+
+.my-custom-close-btn {
+    
+    top: 10px;
+    right: 15px; /* اجعلها left إذا كان الموقع انجليزي */
+    z-index: 999; /* لضمان ظهوره فوق مكون Cash_on_delivery */
+    background: #ff4d4d; /* لون أحمر واضح للتجربة */
+    color: white;
+    border: none;
+    padding: 5px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* تنسيق زر الإغلاق ليكون واضحاً */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    background: #eeeeee;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+}
+
+.modal-header h3 {
+    margin: 0;
+    padding-bottom: 10px;
+    text-align: center;
+    color: #333;
+}
+
+.close-btn:hover {
+    background: #e0e0e0;
+    color: #ff0000; /* يتحول للون الأحمر عند تمرير الماوس */
+}
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #B85A45;
+  border-radius: 10px;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.guest-section {
+    display: block;
+    width: 100%;
+    clear: both;
+    padding: 20px;
+    border-top: 1px dashed #ccc;
+}
+
+.guest-box {
+    display: inline-block;
+    padding: 15px;
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+}
+
+/* تأثير ظهور المودال بانسيابية  showLoadingSwal */
+.modal.fade .modal-dialog {
+    transform: scale(0.9); /* يبدأ أصغر قليلاً */
+    transition: transform 0.3s ease-out;
+}
+
+.modal.show .modal-dialog {
+    transform: scale(1); /* يتمدد للحجم الطبيعي عند الظهور */
+}
+
+/* ظل إمبراطوري للمودال */
+.modal-content {
+    box-shadow: 0 0 30px rgba(184, 90, 69, 0.2); /* توهج برتقالي خفيف */
+    border: 1px solid rgba(184, 90, 69, 0.1) !important;
+}
+
+/* اهتزاز عند ادخال رقم تحقق غير صحيح*/
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-8px); }
+  50% { transform: translateX(8px); }
+  75% { transform: translateX(-8px); }
+}
+
+.shake-modal {
+  animation: shake 0.4s cubic-bezier(.36,.07,.19,.97) both;
+  border: 2px solid #ff4d4d !important; /* ومضة حمراء خفيفة مع الاهتزاز */
+  box-shadow: 0 0 20px rgba(255, 77, 77, 0.3) !important;
+}
+
+.error-message {
+  color: #ff4d4d;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-top: 10px;
+  text-align: center;
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+

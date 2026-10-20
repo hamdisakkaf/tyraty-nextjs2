@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #f4f1ea;
+      }
+
+      .cls-3 {
+        fill: #9c4836;
+      }
+
+      .cls-3, .cls-2 {
+        stroke: #cccccb;
+        stroke-miterlimit: 10;
+        stroke-width: .25px;
+      }
+
+      .cls-4 {
+        font-family: Montserrat-Italic, Montserrat;
+        font-size: 8px;
+      }
+
+      .cls-4, .cls-5 {
+        font-style: italic;
+      }
+
+      .cls-6 {
+        fill: #cccccb;
+      }
+
+      .cls-5 {
+        font-family: Montserrat-BoldItalic, Montserrat;
+        font-size: 28px;
+        font-weight: 700;
+      }
+    </style>
+  </defs>
+  <g>
+    <circle class="cls-3" cx="257.85" cy="161.41" r="5.83"/>
+    <g>
+      <g>
+        <path class="cls-1" d="m404.94,241.07c19.05,60.55-14.3,125.06-74.9,144.47-60.51,19.38-125.24-13.74-144.92-74.12-.03-.09-.06-.18-.09-.26,0,0,.16-.05.31-.1,9.11-2.92,206.14-66.03,218.96-69.79.47-.15.63-.2.63-.2Z"/>
+        <path class="cls-6" d="m404.95,241.06c30.11,98.18-71.31,183.44-162.9,137.32-26.95-13.7-47.92-38.4-57.11-67.19-.22-.27,219.94-69.99,220.01-70.13h0Zm-.01.02c0-.08-220.25,70.5-219.79,70.04,9.17,28.75,30.1,53.4,56.99,67.09,91.52,46.11,192.78-39.08,162.8-137.13h0Z"/>
+      </g>
+      <path class="cls-3" d="m401.56,234.05l-219.8,70.4c-19.46-60.76,13.94-125.64,74.7-145.1,60.76-19.46,125.64,13.94,145.1,74.7Z"/>
+      <path class="cls-3" d="m403.07,236.13l-219.8,70.4c-19.46-60.76,13.94-125.64,74.7-145.1,60.76-19.46,125.64,13.94,145.1,74.7Z"/>
+      <path class="cls-2" d="m404.67,239.22c19.05,60.55-14.3,125.06-74.9,144.47-60.6,19.41-125.43-13.83-145-74.39,0,0,.16-.05.31-.1,9.11-2.92,206.14-66.03,218.96-69.79.47-.15.63-.2.63-.2Z"/>
+    </g>
+  </g>
+  <text class="cls-5" transform="translate(225 443.7)"><tspan x="0" y="0">TYRATY</tspan></text>
+  <text class="cls-4" transform="translate(227.79 452.24)"><tspan x="0" y="0">EMPIRE</tspan></text>
+</svg>

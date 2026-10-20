@@ -1,0 +1,30 @@
+# منع محركات البحث من الوصول إلى لوحة تحكم الموظفين والمديرين
+User-agent: *
+Disallow: /adminLogin
+Disallow: /CreateTire
+Disallow: /createpost
+Disallow: /AddNewPrice
+Disallow: /AddSpecialPropertie
+Disallow: /exchangerates
+Disallow: /requests
+Disallow: /CusomerRequests
+Disallow: /addproduct
+Disallow: /addBrand
+
+Disallow: /checkout/
+Disallow: /ShoppingCart
+Disallow: /orderconfirmation
+
+Allow: /
+Allow: /blog/
+Allow: /postDetails/
+Allow: /tire/
+Allow: /subsectionsFamily/
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Facebot
+Allow: /
+
+Sitemap: https://server.tyraty.com/sitemap.xml
