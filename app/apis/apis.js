@@ -1,11 +1,8 @@
 import axios from "axios";
 
-// 1. تصحيح الاسم
-const isLocalhost = process.env.NEXT_PUBLIC_ISLOCALHOST === 'true';
-
+ const isLocalhost = process.env.NEXT_PUBLIC_ISLOCALHOST === 'true';
 const localhost = 'http://localhost:5000';
 const remoteserver = process.env.NEXT_PUBLIC_API_URL;
-
 const server = isLocalhost ? localhost : remoteserver;
  
 
