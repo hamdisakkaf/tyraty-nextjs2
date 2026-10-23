@@ -40,7 +40,7 @@ const Checkout = () => {
     const producid = searchParams.get('producid')
     const tireSize = searchParams.get('tireSize')
     const tireid = searchParams.get('tireid')
-    const pricesid = searchParams.get('pricesid')
+   // const pricesid = searchParams.get('pricesid')
 
     // ✅ Environment variables
     const isLocalhost = process.env.NEXT_PUBLIC_ISLOCALHOST === 'true';
