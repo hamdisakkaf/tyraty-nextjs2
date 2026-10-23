@@ -34,14 +34,10 @@ import RefObject from './RefObject';
     const navigate = useNavigate();
     const dispatch = useDispatch()
 
-       // قارن القيمة بالنص 'true' لتتأكد
-const isIsLOCALHOSTEnabled = process.env.REACT_APP_ISLOCALHOST === 'false';
-
-const localhost = 'http://localhost:5001'
-const remoteserver = process.env.REACT_APP_API_URL
-
-// الآن سيعمل المنطق بشكل سليم 100%
-const server = isIsLOCALHOSTEnabled ? localhost : remoteserver
+ const isLocalhost = process.env.NEXT_PUBLIC_ISLOCALHOST === 'true';
+const localhost = 'http://localhost:5000';
+const remoteserver = process.env.NEXT_PUBLIC_API_URL;
+const server = isLocalhost ? localhost : remoteserver;
 
     const getCustomerInfo = useSelector((state) => state.CustomerAccount)
     const { SignIn,CustomerToken, statusLogin, errorLogin,CustomerEmail,phoneNumber } = getCustomerInfo

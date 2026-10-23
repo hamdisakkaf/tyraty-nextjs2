@@ -21,10 +21,10 @@ function LocalAgent() {
     }, [SignInAdmin, router])
 
     // ✅ Next.js: environment variables
-    const isLocalhostEnabled = process.env.NEXT_PUBLIC_ISLOCALHOST === 'true'
-    const localhost = process.env.NEXT_PUBLIC_LOCAL_API_URL || 'http://localhost:5000'
-    const remoteServer = process.env.NEXT_PUBLIC_API_URL || 'https://server.tyraty.com'
-    const server = isLocalhostEnabled ? localhost : remoteServer
+    const isLocalhost = process.env.NEXT_PUBLIC_ISLOCALHOST === 'true';
+const localhost = 'http://localhost:5000';
+const remoteserver = process.env.NEXT_PUBLIC_API_URL;
+const server = isLocalhost ? localhost : remoteserver;
 
     const [agentARname, setAgentARname] = useState('')
     const [agentENname, setAgentENname] = useState('')

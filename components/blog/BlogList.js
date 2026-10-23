@@ -11,10 +11,10 @@ export default function BlogList() {
   const [loading, setLoading] = useState(true)
   const [activeCategory, setActiveCategory] = useState('all')
 
-  
-  const server = process.env.NEXT_PUBLIC_ISLOCALHOST === 'false' 
-    ? 'http://localhost:5001' 
-    : 'https://tyraty-server.onrender.com'
+ const isLocalhost = process.env.NEXT_PUBLIC_ISLOCALHOST === 'true';
+const localhost = 'http://localhost:5000';
+const remoteserver = process.env.NEXT_PUBLIC_API_URL;
+const server = isLocalhost ? localhost : remoteserver;
 
   useEffect(() => {
     const fetchPosts = async () => {

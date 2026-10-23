@@ -48,14 +48,10 @@ const initialState = {
     publicEventsMessage: ''
   }
 
-        // قارن القيمة بالنص 'true' لتتأكد
-const isIsLOCALHOSTEnabled = process.env.NEXT_PUBLIC_ISLOCALHOST === 'false';
-
-const localhost = 'http://localhost:5001'
-const remoteserver = process.env.NEXT_PUBLIC_API_URL
-
-// الآن سيعمل المنطق بشكل سليم 100%
-const server = isIsLOCALHOSTEnabled ? localhost : remoteserver
+ const isLocalhost = process.env.NEXT_PUBLIC_ISLOCALHOST === 'true';
+const localhost = 'http://localhost:5000';
+const remoteserver = process.env.NEXT_PUBLIC_API_URL;
+const server = isLocalhost ? localhost : remoteserver;
 
 //addToBasket\
 /* تم نقله الى reducer  عادي لانه لا حتاج الى طلب الى السيرفر

@@ -24,8 +24,10 @@ const InstallationChoice = ({ orderId, customerCityId, customerCityName, custome
     const [loading, setLoading] = useState(false);
     const [fetchingCenters, setFetchingCenters] = useState(false);
 
-    const isLOCALHOST = process.env.NEXT_PUBLIC_ISLOCALHOST === 'false';
-    const server = isLOCALHOST ? 'http://localhost:5000' : process.env.NEXT_PUBLIC_API_URL;
+     const isLocalhost = process.env.NEXT_PUBLIC_ISLOCALHOST === 'true';
+const localhost = 'http://localhost:5000';
+const remoteserver = process.env.NEXT_PUBLIC_API_URL;
+const server = isLocalhost ? localhost : remoteserver;
 
         const { orderBasketlist, lastOrderDetails, product_id,amount, } = useSelector((state) => state.basket);
     console.log('lastOrderDetails in InstallationChoice:',lastOrderDetails)

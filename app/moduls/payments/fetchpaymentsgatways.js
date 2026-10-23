@@ -5,14 +5,10 @@ function Button() {
   return <button>Click me</button>;
 }
 
-         // قارن القيمة بالنص 'true' لتتأكد
-const isIsLOCALHOSTEnabled = process.env.REACT_APP_ISLOCALHOST === 'true';
-
-const localhost = 'http://localhost:5000'
-const remoteserver = process.env.REACT_APP_API_URL
-
-// الآن سيعمل المنطق بشكل سليم 100%
-const server = isIsLOCALHOSTEnabled ? localhost : remoteserver
+ const isLocalhost = process.env.NEXT_PUBLIC_ISLOCALHOST === 'true';
+const localhost = 'http://localhost:5000';
+const remoteserver = process.env.NEXT_PUBLIC_API_URL;
+const server = isLocalhost ? localhost : remoteserver;
 
    function Fetchpaymentsgatways () {
                     //const headers = { 'Authorization': `Bearer ${userToken}` };

@@ -36,7 +36,7 @@ import ModalUser from '../CashTamkeen/ModalUser';
     const [date, setDate] = useState(new Date().toLocaleDateString());
 
        // قارن القيمة بالنص 'true' لتتأكد
-const isIsLOCALHOSTEnabled = process.env.REACT_APP_ISLOCALHOST === 'true';
+const isIsLOCALHOSTEnabled = process.env.REACT_APP_ISLOCALHOST === 'false';
 
 const localhost = 'http://localhost:5000'
 const remoteserver = process.env.REACT_APP_API_URL
