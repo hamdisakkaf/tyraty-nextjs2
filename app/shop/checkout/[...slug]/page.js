@@ -32,7 +32,7 @@ const Checkout = () => {
     const { savedretailcustomerinvoicestate, toShoppingCart, isSuccess, paymentData, error, paymentSuccess, showTrCodeCashmodalstate, showTrCodeCashFastmodalstate, cashpayMESSAGEDESC, transactionCashRef, kurimipayMESSAGEDESC, paymentState, OperationStatusCashPayment } = getPaymentState
 
     // ✅ بيانات السلة من Redux - هذه هي البيانات التي نمررها لـ PaymentsGatewaysGuest
-    const { localagents, orderBasketlist, lastOrderDetails, product_id, amount } = useSelector((state) => state.basket)
+    const { localagents, orderBasketlist, lastOrderDetails, product_id, amount, pricesid } = useSelector((state) => state.basket)
     console.log('lastOrderDetails in Checkout:', lastOrderDetails)
 
     // ✅ استخراج المعاملات من URL (Next.js App Router)
