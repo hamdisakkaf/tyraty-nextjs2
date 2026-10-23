@@ -42,7 +42,7 @@ export const registerUser = createAsyncThunk(
   async (user, { rejectWithValue }) => {
     try {
       // Axios يقوم بتحويل البيانات لـ JSON تلقائياً ويرمي خطأ إذا كان الرد 400 أو 500
-      const response = await axios.post("http://localhost:5001/adduser", user);
+      const response = await axios.post(`${server}/adduser`, user);
       
       return response.data;
 

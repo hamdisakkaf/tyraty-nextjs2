@@ -49,10 +49,12 @@ export default function PaymentsGatewaysGuest() {
 
   // ✅ بيانات السلة من Redux (بدلاً من الـ props)
   const { lastOrderDetails } = useSelector((state) => state.basket)
+  console.log('PaymentsGatewaysGuest lastOrderDetails',lastOrderDetails)
 
   // ✅ استخراج جميع البيانات من Redux مع fallback values
   const {
-    pricesid = null,
+    pricesid, 
+    //product_id= null,
     amount = 0,
     finalPrice = 0,
     quantity = 1,
@@ -65,6 +67,7 @@ export default function PaymentsGatewaysGuest() {
     date: orderDate = new Date().toISOString(),
     paymentMethod = '',
   } = lastOrderDetails || {}
+  console.log(' lastOrderDetails pricesid',pricesid)
 
   // ✅ استخراج بيانات المنتج الأول من items
   const firstItem = items[0] || {}
@@ -115,9 +118,8 @@ export default function PaymentsGatewaysGuest() {
     getRates()
   }, [])
 
-  console.log("yemeniRials KSAxchangerial:", KSAxchangerial)
-  console.log("yemeniRials DolarexchangeRial:", DolarexchangeRial)
-
+  //console.log("yemeniRials KSAxchangerial:", KSAxchangerial)
+  //console.log("yemeniRials DolarexchangeRial:", DolarexchangeRial)
   const [paymentsgatways, setPaymentsgatways] = useState([])
 
   useEffect(() => {
@@ -136,7 +138,7 @@ export default function PaymentsGatewaysGuest() {
   }
 
   // ✅ حماية: إذا لم تتوفر بيانات السلة
-  if (!lastOrderDetails || !pricesid) {
+  if (!lastOrderDetails || !lastOrderDetails.pricesid ) { //!pricesid
     return (
       <div className="container py-5 text-center">
         <div className="alert alert-warning" role="alert">
