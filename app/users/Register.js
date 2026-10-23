@@ -18,13 +18,13 @@ function Register() {
     const { loading, userInfo, error, success } = getCustomerInfo;
 
     // 1. تصحيح الاسم
-    const isLocalhostEnabled = process.env.NEXT_PUBLIC_ISLOCALHOST === 'true';
+    const isLocalhostEnabled = process.env.NEXT_PUBLIC_ISLOCALHOST === 'false';
 
     // 2. استخدام متغيرات البيئة للرابطين (مع قيمة احتياطية للوكل هوست)
     const localhost = process.env.NEXT_PUBLIC_LOCAL_API_URL || 'http://localhost:5000';
 
     // 3. إضافة قيمة احتياطية للسيرفر البعيد لتجنب الـ undefined
-    const remoteServer = process.env.NEXT_PUBLIC_API_URL || 'https://server.tyraty.com';
+    const remoteServer = process.env.NEXT_PUBLIC_API_URL || 'https://tyraty-server.onrender.com';
 
     // اختيار السيرفر
     const server = isLocalhostEnabled ? localhost : remoteServer;

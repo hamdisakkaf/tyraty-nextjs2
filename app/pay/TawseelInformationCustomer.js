@@ -28,7 +28,7 @@ export default function TawseelInformationCustomer({ orderId, selectedInstallati
     const getPaymentState = useSelector((state) => state.PaymentPaySlice);
     const { localagents, lastOrderDetails } = useSelector((state) => state.basket);
 
-    const isIsLOCALHOSTEnabled = process.env.NEXT_PUBLIC_ISLOCALHOST === 'true';
+    const isIsLOCALHOSTEnabled = process.env.NEXT_PUBLIC_ISLOCALHOST === 'false';
     const localhost = 'http://localhost:5000';
     const remoteserver = process.env.NEXT_PUBLIC_API_URL;
     const server = isIsLOCALHOSTEnabled ? localhost : remoteserver;

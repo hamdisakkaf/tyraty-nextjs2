@@ -32,7 +32,7 @@ import { Modal } from 'react-bootstrap'
 import { ShieldLock, PersonPlus, BoxArrowInRight, Telephone, Lock } from 'react-bootstrap-icons'
 
 // --- Configuration ---
-const isLocalhostEnabled = process.env.NEXT_PUBLIC_ISLOCALHOST === 'true'
+const isLocalhostEnabled = process.env.NEXT_PUBLIC_ISLOCALHOST === 'false'
 const localhost = process.env.NEXT_PUBLIC_LOCAL_API_URL || 'http://localhost:5001'
 const remoteServer = process.env.NEXT_PUBLIC_API_URL || 'https://tyraty-server.onrender.com'
 const server = isLocalhostEnabled ? localhost : remoteServer
@@ -310,7 +310,7 @@ const RequestRow = ({ val, brandLogos, localagent, onCheckStock, onProcessOrder,
 };
 
 const notificationSound = new Audio("sounds/ding.mp3")
-const socket = io.connect("https://server.tyraty.com")
+const socket = io.connect("https://tyraty-server.onrender.com")
 
 // --- Main Component ---
 const CustomersRetailRequests = () => {

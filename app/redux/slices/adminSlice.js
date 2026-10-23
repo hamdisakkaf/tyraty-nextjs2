@@ -30,7 +30,7 @@ const initialState = {
   }
 
 // 1. تصحيح الاسم
-const isLocalhostEnabled = process.env.NEXT_PUBLIC_ISLOCALHOST === 'true';
+const isLocalhostEnabled = process.env.NEXT_PUBLIC_ISLOCALHOST === 'false';
 
 // 2. استخدام متغيرات البيئة للرابطين (مع قيمة احتياطية للوكل هوست)
 const localhost = process.env.NEXT_PUBLIC_LOCAL_API_URL || 'http://localhost:5001';

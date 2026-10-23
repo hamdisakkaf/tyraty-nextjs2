@@ -12,7 +12,7 @@ export default function BlogList() {
   const [activeCategory, setActiveCategory] = useState('all')
 
   
-  const server = process.env.NEXT_PUBLIC_ISLOCALHOST === 'true' 
+  const server = process.env.NEXT_PUBLIC_ISLOCALHOST === 'false' 
     ? 'http://localhost:5001' 
     : 'https://tyraty-server.onrender.com'
 

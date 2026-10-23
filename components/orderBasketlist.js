@@ -40,7 +40,11 @@ import { CustomerLogOut,Customerlogin } from '../redux/slices/CustomersSlice';
 //Axios.defaults.baseurl = process.env.react_app_be_url;
 import { addToOrder } from '../redux/slices/basketSlice';
 
-
+// --- Configuration ---
+const isLocalhostEnabled = process.env.NEXT_PUBLIC_ISLOCALHOST === 'false'
+const localhost = process.env.NEXT_PUBLIC_LOCAL_API_URL || 'http://localhost:5001'
+const remoteServer = process.env.NEXT_PUBLIC_API_URL || 'https://tyraty-server.onrender.com'
+const server = isLocalhostEnabled ? localhost : remoteServer
 
   const OrserBasketList = () => {
     //Now Listen for Events (welcome event).
@@ -115,7 +119,7 @@ import { addToOrder } from '../redux/slices/basketSlice';
           );
          })
          const yemeniRials = ()=> {
-          axios.get(`https://server.tyraty.com/getexchangeDolar`).then((data)=>{
+          axios.get(`${server}/getexchangeDolar`).then((data)=>{
             setDolarexchangeRial(data.data[0].DolarexchangeRial);
             setRySaudixchangeRial(data.data[0].KSAxchangeRial);
 

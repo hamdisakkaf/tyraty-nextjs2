@@ -63,10 +63,10 @@ export default function TirePage() {
   const [error, setError] = useState(null)
 
   // ✅ Environment
-  const isLocalhost = process.env.NEXT_PUBLIC_ISLOCALHOST === 'true'
+  const isLocalhost = process.env.NEXT_PUBLIC_ISLOCALHOST === 'false'
   const server = isLocalhost 
     ? (process.env.NEXT_PUBLIC_LOCAL_API_URL || 'http://localhost:5000')
-    : (process.env.NEXT_PUBLIC_API_URL || 'https://server.tyraty.com')
+    : (process.env.NEXT_PUBLIC_API_URL || 'https://tyraty-server.onrender.com')
 
 
   // ═══════════════════════════════════════════════════════════

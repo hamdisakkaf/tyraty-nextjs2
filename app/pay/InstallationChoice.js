@@ -24,7 +24,7 @@ const InstallationChoice = ({ orderId, customerCityId, customerCityName, custome
     const [loading, setLoading] = useState(false);
     const [fetchingCenters, setFetchingCenters] = useState(false);
 
-    const isLOCALHOST = process.env.NEXT_PUBLIC_ISLOCALHOST === 'true';
+    const isLOCALHOST = process.env.NEXT_PUBLIC_ISLOCALHOST === 'false';
     const server = isLOCALHOST ? 'http://localhost:5000' : process.env.NEXT_PUBLIC_API_URL;
 
         const { orderBasketlist, lastOrderDetails, product_id,amount, } = useSelector((state) => state.basket);

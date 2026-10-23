@@ -30,7 +30,7 @@ const InvoiceReview = () => {
   const [invoiseButton, setInvoiseButton] = useState(false)
   const [printEnabled, setPrintEnabled] = useState(true)
 
-  const isLocalhostEnabled = process.env.NEXT_PUBLIC_ISLOCALHOST === 'true';
+  const isLocalhostEnabled = process.env.NEXT_PUBLIC_ISLOCALHOST === 'false';
   const localhost = process.env.NEXT_PUBLIC_LOCAL_API_URL || 'http://localhost:5001';
   const remoteServer = process.env.NEXT_PUBLIC_API_URL || 'https://tyraty-server.onrender.com';
   const server = isLocalhostEnabled ? localhost : remoteServer;

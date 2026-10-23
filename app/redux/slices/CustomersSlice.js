@@ -34,7 +34,7 @@ const initialState = {
   }
 
 // 1. تصحيح الاسم
-const isIsLOCALHOSTEnabled = process.env.NEXT_PUBLIC_ISLOCALHOST === 'true';
+const isIsLOCALHOSTEnabled = process.env.NEXT_PUBLIC_ISLOCALHOST === 'false';
 
 const localhost = 'http://localhost:5001'
 const remoteserver = process.env.NEXT_PUBLIC_API_URL

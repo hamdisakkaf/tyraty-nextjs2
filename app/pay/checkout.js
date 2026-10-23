@@ -40,7 +40,7 @@ const Checkout = () => {
     const pricesid = searchParams.get('pricesid')
 
     // ✅ Environment variables
-    const isIsLOCALHOSTEnabled = process.env.NEXT_PUBLIC_ISLOCALHOST === 'true'
+    const isIsLOCALHOSTEnabled = process.env.NEXT_PUBLIC_ISLOCALHOST === 'false'
     const localhost = 'http://localhost:5000'
     const remoteserver = process.env.NEXT_PUBLIC_API_URL
     const server = isIsLOCALHOSTEnabled ? localhost : remoteserver

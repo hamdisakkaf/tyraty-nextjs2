@@ -34,9 +34,9 @@ const PinkSwitch = styled(Switch)(({ theme }) => ({
 const label = { inputProps: { 'aria-label': 'Color switch demo' } }
 
 // Environment variables (Next.js style)
-const isLocalhostEnabled = process.env.NEXT_PUBLIC_ISLOCALHOST === 'true'
+const isLocalhostEnabled = process.env.NEXT_PUBLIC_ISLOCALHOST === 'false'
 const localhost = process.env.NEXT_PUBLIC_LOCAL_API_URL || 'http://localhost:5000'
-const remoteServer = process.env.NEXT_PUBLIC_API_URL || 'https://server.tyraty.com'
+const remoteServer = process.env.NEXT_PUBLIC_API_URL || 'https://tyraty-server.onrender.com'
 const server = isLocalhostEnabled ? localhost : remoteServer
 
 console.log('Current API Server:', server)

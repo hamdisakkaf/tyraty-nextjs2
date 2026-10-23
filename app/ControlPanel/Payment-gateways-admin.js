@@ -8,7 +8,7 @@ import { paymentgatewaySwitch } from '../redux/slices/payementSlice'
 
 const isLocalhostEnabled = process.env.NEXT_PUBLIC_ISLOCALHOST === 'true';
 const localhost = process.env.NEXT_PUBLIC_LOCAL_API_URL || 'http://localhost:5000';
-const remoteServer = process.env.NEXT_PUBLIC_API_URL || 'https://server.tyraty.com';
+const remoteServer = process.env.NEXT_PUBLIC_API_URL || 'https://tyraty-server.onrender.com';
 const server = isLocalhostEnabled ? localhost : remoteServer;
 
  function PaymentsGatewaysAdmin() {

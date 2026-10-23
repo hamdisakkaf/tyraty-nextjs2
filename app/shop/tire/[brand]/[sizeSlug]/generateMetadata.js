@@ -10,7 +10,7 @@
  * data for professional social media sharing.
  */
 
-const SITE_URL = 'https://tyraty.com'
+const SITE_URL = 'https://tyraty-nextjs2.onrender.com'
 const SITE_NAME = 'امباير تايراتي'
 const SITE_NAME_EN = 'Tyraty.com'
 const DEFAULT_OG_IMAGE = `${SITE_URL}/assests/tyraty_logo.svg`
@@ -21,7 +21,7 @@ const DEFAULT_OG_IMAGE = `${SITE_URL}/assests/tyraty_logo.svg`
  */
 async function fetchTireData(tireid) {
   try {
-    const apiUrl = `https://server.tyraty.com/api/getFromTireId?producid=${tireid}`
+    const apiUrl = `https://tyraty-nextjs2.onrender.com/api/getFromTireId?producid=${tireid}`
     const response = await fetch(apiUrl, { 
       next: { revalidate: 60 }, // ISR: revalidate every 60 seconds
     })
